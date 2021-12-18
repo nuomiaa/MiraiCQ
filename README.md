@@ -4,14 +4,14 @@ MiraiCQ 是一个基于 MiraiCQ-API 开发的 NodeJS QQ机器人框架
 
 使用了方便的 CQ 代码: [图片,xxxxx] [表情,123]
 
-<br>
+<br><br>
 
 ## 安装
 ```shell
 npm install miraicq
 ```
 
-<br>
+<br><br>
 
 ## 示例
 ### 简单
@@ -76,4 +76,4 @@ const { Bot, cq } = require('./Bot');
 ```
 
 ### 完整
-完整示例请查看: <a href="https://github.com/nuomiaa/MiraiCQ/blob/master/demo.js" target="_blank">demo.js</a>
+完整示例请查看: [demo.js](https://github.com/nuomiaa/MiraiCQ/blob/master/demo.js)
