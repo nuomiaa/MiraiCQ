@@ -5,6 +5,12 @@ const WebSocket = require('./util/ws');
 const tools = require('./util/tools');
 const cq = require('./core/cq');
 
+/*
+* MiraiCQ - NodeJS开发框架
+* 作者: 糯米(nuomiaa)
+* GitHub: https://github.com/nuomiaa/MiraiCQ
+*/
+
 class Bot {
     constructor(url, verifyKey, qq) {
         if (!url || !verifyKey || !qq) {
