@@ -112,7 +112,6 @@ module.exports = {
                     if (m[1].indexOf('http')>-1) param_ = {url: m[1]};
                     else param_ = {path: m[1]};
                 } else param_ = {imageId: m[1]};
-                console.log({type:'Image', ...param_})
                 chain.push({type:'Image', ...param_});
             } else {
                 chain.push({type:'Plain', text:text});

@@ -308,7 +308,6 @@ class Bot {
 
                     // 全员禁言
                     case 'GroupMuteAllEvent':
-                        console.log(data)
                         callback({
                             state: data.current,
                             group: {
@@ -724,8 +723,6 @@ class Bot {
 
                     // 群消息
                     case 'GroupMessage':
-                        if (json.data.sender.group.id!==929911672) break;
-                        console.log(json.data.messageChain)
                         callback({
                             time: source.time,
                             messageId: source.id,
@@ -1136,11 +1133,6 @@ class Bot {
 
     // 禁言群成员
     async muteMember(groupId, memberId, time) {
-        console.log({
-            time: time,
-            target: groupId,
-            memberId: memberId
-        })
         return await this.send('mute', {
             time: time,
             target: groupId,
@@ -1220,7 +1212,8 @@ class Bot {
     // 获取群员信息 (名片/街头)
     async getMemberInfo(groupId, memberId) {
         return await this.send('memberInfo', {
-            target: groupId
+            target: groupId,
+            memberId: memberId
         }, 'get');
     }
 
@@ -1228,8 +1221,9 @@ class Bot {
     // 修改群员信息 (名片/街头)
     async modifyMemberConfig(groupId, memberId, info) {
         return await this.send('memberInfo', {
+            info: info,
             target: groupId,
-            info: info
+            memberId: memberId
         }, 'update');
     }
 }
